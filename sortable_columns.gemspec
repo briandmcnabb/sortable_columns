@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Brian McNabb"]
   s.email       = ["brian.d.mcnabb@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{Make your columns sortable... in a snap! }
+  s.summary     = %q{Make your columns sortable... in a snap!}
   s.description = %q{'sortable_columns' is a clean and lightweight solution for making table columns sortable.}
 
   s.rubyforge_project = "sortable_columns"
