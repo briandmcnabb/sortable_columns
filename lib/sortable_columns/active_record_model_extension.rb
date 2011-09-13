@@ -1,3 +1,5 @@
+require File.join(File.dirname(__FILE__), 'configuration_methods')
+
 module SortableColumns
   module ActiveRecordModelExtension
     extend ActiveSupport::Concern
