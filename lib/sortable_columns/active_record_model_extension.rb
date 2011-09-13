@@ -1,12 +1,8 @@
-require File.join(File.dirname(__FILE__), 'configuration_methods')
-
 module SortableColumns
   module ActiveRecordModelExtension
     extend ActiveSupport::Concern
     
-    included do
-      self.send(:include, SortableColumns::ConfigurationMethods)
-      
+    included do      
       self.scope :sort, Proc.new { |column,direction| order("created_at asc") }
     end
   end

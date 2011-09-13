@@ -1,10 +1,15 @@
-require File.join(File.dirname(__FILE__), '..', 'configuration_methods')
-
 module SortableColumns
   module ActionViewExtension
     extend ::ActiveSupport::Concern
     module InstanceMethods
-      self.send(:include, SortableColumns::ConfigurationMethods)
+      
+      def sort_column(column)
+        self.attribute_names.include?(column) ? column : "created_at"
+      end
+
+      def sort_direction(direction)
+        %w[asc desc].include?(direction) ? direction : "asc"
+      end
       
       def sortable(column, title = nil)
         title ||= column.titleize
