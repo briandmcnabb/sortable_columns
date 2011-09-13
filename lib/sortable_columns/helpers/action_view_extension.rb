@@ -1,4 +1,4 @@
-require File.join(File.dirname(__File__), '..', 'sorter')
+require File.join(File.dirname(__FILE__), '..', 'sorter')
 
 module SortableColumns
   module ActionViewExtension
