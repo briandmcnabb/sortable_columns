@@ -7,7 +7,8 @@ module SortableColumns
     included do
       self.send(:include, SortableColumns::ConfigurationMethods)
       
-      self.scope :sort, Proc.new { |column,direction| order("#{sort_column(column)} #{sort_direction(direction)}") }
+      self.scope :sort, Proc.new { |column,direction| order("#{sort_column(column)} asc}") }
     end
   end
 end
+# #{sort_direction(direction)}
