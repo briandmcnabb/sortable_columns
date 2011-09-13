@@ -1,5 +1,6 @@
-require "sortable_columns/version"
-
 module SortableColumns
-  # Your code goes here...
+  ActiveSupport.on_load(:active_record) do
+    require 'kaminari/models/active_record_extension'
+    ::ActiveRecord::Base.send :include, SortableColumns::ActiveRecordExtension
+  end
 end
