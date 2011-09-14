@@ -5,14 +5,14 @@ module SortableColumns
     extend ActiveSupport::Concern
     included do
       # Future subclasses will pick up the model extension
-      def self.inherited(kls) #:nodoc:
+      def self.inherited(subclass) #:nodoc:
         super
-        kls.send(:include, SortableColumns::ActiveRecordModelExtension) if kls.superclass == ActiveRecord::Base
+        subclass.send(:include, SortableColumns::ActiveRecordModelExtension) if subclass.superclass == ActiveRecord::Base
       end
 
       # Existing subclasses pick up the model extension as well
-      self.descendants.each do |kls|
-        kls.send(:include, SortableColumns::ActiveRecordModelExtension) if kls.superclass == ActiveRecord::Base
+      self.descendants.each do |subclass|
+        subclass.send(:include, SortableColumns::ActiveRecordModelExtension) if subclass.superclass == ActiveRecord::Base
       end
     end
   end
