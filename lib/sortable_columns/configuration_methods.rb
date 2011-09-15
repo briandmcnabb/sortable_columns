@@ -3,16 +3,23 @@ module SortableColumns
     extend ActiveSupport::Concern
     module ClassMethods
 
-      # This model's default +per_page+ value
-      # returns +default_per_page+ value unless explicitly overridden via <tt>paginates_per</tt>
       def sort_column(column)
-        # Need to add sanitation logic
-        column || SortColumn.config.default_sort_column
+        return SortableColumns.config.default_sort_column if column.nil?
+        sanitize_column(column) || SortableColumns.config.default_sort_column
       end
       
       def sort_direction(direction)
-        # Need to add sanitation logic
-        direction || SortColumn.config.default_sort_column
+        return SortableColumns.config.default_sort_direction if direction.nil?
+        sanitize_direction(direction) || SortableColumns.config.default_sort_direction
+      end
+      
+      private
+      def sanitize_column(column)
+        return column if self.attribute_names.include?(column)
+      end
+
+      def sanitize_direction(direction)
+        return direction if %w[asc desc].include?(direction)
       end
     end
   end

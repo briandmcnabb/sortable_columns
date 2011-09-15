@@ -27,7 +27,7 @@ module SortableColumns
 
   configure do |config|
     config.default_sort_column = 'created_at'
-    config.default_sort_column = 'dsc'
+    config.default_sort_direction = 'desc'
     config.param_name = :sortable
   end
 end

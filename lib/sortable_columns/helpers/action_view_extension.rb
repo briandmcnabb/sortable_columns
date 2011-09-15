@@ -2,7 +2,7 @@ require File.join(File.dirname(__FILE__), '..', 'sorter')
 
 module SortableColumns
   module ActionViewExtension
-    extend ::ActiveSupport::Concern
+    extend ActiveSupport::Concern
     
     module InstanceMethods
       def sortable(column, title = nil)
