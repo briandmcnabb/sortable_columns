@@ -2,3 +2,7 @@
 .bundle
 Gemfile.lock
 pkg/*
+
+
+spec/internal/db/*.sqlite3
+spec/internal/log/*.log
