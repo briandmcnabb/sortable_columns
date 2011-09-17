@@ -3,7 +3,7 @@ require 'sortable_columns/config'
 require 'sortable_columns/configuration_methods'
 
 module SortableColumns
-  class Railtie < ::Rails::Railtie #:nodoc:
+  class SortableColumnsRailtie < ::Rails::Railtie #:nodoc:
     initializer 'sortable_columns' do |app|
       ActiveSupport.on_load(:active_record) do
         require 'sortable_columns/active_record_extension'

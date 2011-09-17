@@ -1,4 +1,4 @@
-require 'sortable_columns/railtie'
+require 'sortable_columns/sortable_columns_railtie'
 
 #require 'rails'
 #require 'sortable_columns/config'
