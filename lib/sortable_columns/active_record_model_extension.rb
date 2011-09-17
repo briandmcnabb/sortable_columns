@@ -3,8 +3,8 @@ module SortableColumns
     extend ActiveSupport::Concern
     
     included do      
-      self.send(:include, SortableColumns::ConfigurationMethods)
-      self.scope :sort, Proc.new { |column,direction| order("#{sort_column(column)} #{sort_direction(direction)}") }
+      include SortableColumns::ConfigurationMethods
+      scope :sort, Proc.new { |column,direction| order("#{sort_column(column)} #{sort_direction(direction)}") }
     end
   end
 end
