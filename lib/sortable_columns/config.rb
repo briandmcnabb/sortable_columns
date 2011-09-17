@@ -28,6 +28,6 @@ module SortableColumns
   configure do |config|
     config.default_sort_column = 'created_at'
     config.default_sort_direction = 'desc'
-    config.param_name = :sortable
+    config.param_name = :sort
   end
 end
