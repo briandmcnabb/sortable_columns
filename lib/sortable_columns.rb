@@ -4,7 +4,7 @@ require 'sortable_columns/configuration_methods'
 
 module SortableColumns  
   ActiveSupport.on_load(:active_record) do
-    require 'sortable_columns/active_record_extension'
+    require 'sortable_columns/models/active_record_extension'
     include SortableColumns::ActiveRecordExtension
   end
   

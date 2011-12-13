@@ -5,10 +5,13 @@ module SortableColumns
     extend ActiveSupport::Concern
     included do
       # Future subclasses will pick up the model extension
-      def self.inherited(subclass) #:nodoc:
-        super
-        subclass.send(:include, SortableColumns::ActiveRecordModelExtension) if subclass.superclass == ActiveRecord::Base
-      end
+      class << self
+        def inherited_with_sortable_columns(subclass) #:nodoc:
+          inherited_without_sortable_columns subclass
+          subclass.send(:include, SortableColumns::ActiveRecordModelExtension) if subclass.superclass == ActiveRecord::Base
+        end
+        alias_method_chain :inherited, :sortable_columns
+      end      
 
       # Existing subclasses pick up the model extension as well
       self.descendants.each do |subclass|
