@@ -23,10 +23,8 @@ Just instantiation the +ColumnSorter+ object with the class to be sorted and pas
 
 === Views
 
-* the same old helper method
-
-  Just call the +sortable+ helper:
-    <%= sortable column_name %>
+Just call the +sortable+ helper:
+  <%= sortable column_name %>
 
 == Copyright
 
