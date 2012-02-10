@@ -1,15 +1,10 @@
-require 'rails'
+require 'action_view'
 require 'sortable_columns/config'
-require 'sortable_columns/configuration_methods'
+require 'sortable_columns/column_sorter'
 
-module SortableColumns  
-  ActiveSupport.on_load(:active_record) do
-    require 'sortable_columns/models/active_record_extension'
-    include SortableColumns::ActiveRecordExtension
-  end
-  
+module SortableColumns
   ActiveSupport.on_load(:action_view) do
-    require 'sortable_columns/helpers/action_view_extension'
-    include SortableColumns::ActionViewExtension
+    require 'sortable_columns/action_view_extensions/sort_helper'
+    include SortableColumns::ActionViewExtensions::SortHelper
   end
 end
