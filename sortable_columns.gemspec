@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = SortableColumns::VERSION
   s.authors     = ["Brian McNabb"]
   s.email       = ["brian.d.mcnabb@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/briandmcnabb/sortable_columns"
   s.summary     = %q{Make your columns sortable... in a snap!}
   s.description = %q{'sortable_columns' is a clean and lightweight solution for making table columns sortable.}
 
