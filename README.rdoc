@@ -16,6 +16,7 @@ Then bundle:
 === Column Sorter
 
   Just instantiation the +ColumnSorter+ class with the class to be sorted; then pass the +params[:column]+ and +params[:direction]+ to the methods of the same name to sanitize / defaultize the inputs.
+    
     sort = ColumnSorter.new(klass)
     sort.column(params[:column])
     sort.direction(params[:direction])
