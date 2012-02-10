@@ -28,7 +28,7 @@ Just call the +sortable+ helper:
 
 == TODOS
 
-* This gem has zero testing coverage [SAD TROMBONE](http://www.sadtrombone.com/) ;(..
+* This gem has zero testing coverage link(http://www.sadtrombone.com/, [SAD TROMBONE])    ;(..
 * ActiveRecord Scope Extension
 
 == Copyright
