@@ -15,8 +15,8 @@ Then bundle:
 
 === Column Sorter
 
-  Just instantiation the +ColumnSorter+ class with the class and pass the pertinent parameters to it.
-    
+Just instantiation the +ColumnSorter+ class with the class and pass the pertinent parameters to it.
+
     sort = ColumnSorter.new(klass)
     sort.column(params[:column])
     sort.direction(params[:direction])
