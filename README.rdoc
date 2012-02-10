@@ -26,6 +26,11 @@ Just instantiation the +ColumnSorter+ object with the class to be sorted and pas
 Just call the +sortable+ helper:
   <%= sortable column_name %>
 
+== Usage
+
+* TESTS!!!
+* ActiveRecord scope
+
 == Copyright
 
 Copyright (c) 2012 Brian McNabb. See LICENSE.txt for further details.
