@@ -26,7 +26,7 @@ Just instantiation the +ColumnSorter+ object with the class to be sorted and pas
 Just call the +sortable+ helper:
   <%= sortable column_name %>
 
-== TODOS
+== TODOs
 
 * This gem has zero testing coverage.  {SAD TROMBONE}[http://www.sadtrombone.com/]
 * ActiveRecord Scope Extension
