@@ -1,19 +1,25 @@
 module SortableColumns
-  class ColumnSorter
+  class Sortablizer
     attr_reader :resource
     
     def initialize(resource)
       @resource = resource
     end
     
-    def column(column=nil)
-      return SortableColumns.config.default_sort_column if column.nil?
-      sanitize_column(column) || SortableColumns.config.default_sort_column
+    def column(column=nil, options={})
+      if column.nil?
+        options[:default] || 'created_at'
+      else
+        sanitize_column(column) || options[:default]
+      end
     end
     
-    def direction(direction=nil)
-      return SortableColumns.config.default_sort_direction if direction.nil?
-      sanitize_direction(direction) || SortableColumns.config.default_sort_direction
+    def direction(direction=nil, options={})
+      if direction.nil? 
+        options[:default] || 'desc' 
+      else
+        sanitize_direction(direction) || options[:default]
+      end
     end
     
     
